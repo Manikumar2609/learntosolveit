@@ -41,16 +41,16 @@ Let's take n as 3::
 	~(~0 << n) << (p+1 -n)  = 0000 0111 << (3+1 -3)
 					   		= 0000 0111 << 1
 					   		= 000 0111 0
-					   		= 0000 1111
+					   		= 0000 1110
 
 Inverting the bits can accomplished by the XOR operation ``(^)``
 
 So, a value like 8 which is 0000 1000 can be inverted can inverted from 3rd
 position onwards by::
 
-	x ^ (~(~0 << n) << (p + 1 - n)) = 0000 1000 ^ 0000 1111
-									= 0000 1111
-									= 15
+	x ^ (~(~0 << n) << (p + 1 - n)) = 0000 1000 ^ 0000 1110
+									= 0000 1100
+									= 6
 
 
 
